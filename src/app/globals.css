@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2563eb;
+  --color-brand-soft: #dbeafe;
+}
+
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --accent: #2563eb;
+  --accent-soft: #e0ecff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1120;
+    --panel: #111827;
+    --ink: #e5e7eb;
+    --muted: #94a3b8;
+    --line: #1f2937;
+    --accent: #60a5fa;
+    --accent-soft: #172554;
+  }
+}
+
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans", sans-serif;
+}
+.panel { background: var(--panel); border: 1px solid var(--line); }
+.muted { color: var(--muted); }
+.bubble-own { background: var(--panel); border: 1px solid var(--line); }
+.bubble-tr { background: var(--accent-soft); border: 1px solid var(--accent); }
+.btn { border-radius: 0.5rem; padding: 0.5rem 0.9rem; font-weight: 600; border: 1px solid var(--line); background: var(--panel); }
+.btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
+.btn:disabled { opacity: 0.5; }
+.input { width: 100%; border: 1px solid var(--line); background: var(--panel); border-radius: 0.5rem; padding: 0.55rem 0.75rem; }
+.input:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
